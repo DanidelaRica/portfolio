@@ -399,13 +399,15 @@ html {
 #portfolio .fila {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap; /* Para que los proyectos se ajusten en pantallas pequeñas */
     margin: 30px 0;
 }
 
 #portfolio .fila .proyecto {
-    max-width: 450px;
+    max-width: 32%; /* Para que quepan 3 por fila en pantallas grandes */
+    flex: 1 1 30%; /* Ajustar la anchura de cada proyecto */
     border: 1px solid #000;
-    margin: 0 10px;
+    margin: 0 10px 20px; /* Añadir margen inferior para separación en pantallas pequeñas */
     position: relative;
     overflow: hidden;
 }
@@ -437,6 +439,15 @@ html {
 #portfolio .fila .proyecto:hover .info {
     opacity: 1;
     bottom: 0;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    #portfolio .fila .proyecto {
+        max-width: 100%; /* En pantallas pequeñas, que ocupen toda la fila */
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+    }
 }
 
 /* SECCION CONTACTO */
