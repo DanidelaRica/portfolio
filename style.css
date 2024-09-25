@@ -410,7 +410,10 @@ html {
     margin: 0 10px 20px; /* Añadir margen inferior para separación en pantallas pequeñas */
     position: relative;
     overflow: hidden;
+    height: 400px; /* Añadir esta línea */
+
 }
+
 
 #portfolio .fila .proyecto img {
     width: 100%;
@@ -457,6 +460,7 @@ html {
         max-width: 100%; /* En pantallas pequeñas, que ocupen toda la fila */
         flex: 1 1 100%;
         margin-bottom: 20px;
+        height: auto;
     }
 }
 
